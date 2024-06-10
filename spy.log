@@ -1,0 +1,24 @@
+1706151395915|3|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|select * from INFORMATION_SCHEMA.SEQUENCES|select * from INFORMATION_SCHEMA.SEQUENCES
+1706151396353|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     drop table if exists ber cascade |     drop table if exists ber cascade 
+1706151396354|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     drop sequence if exists ber_seq|     drop sequence if exists ber_seq
+1706151396358|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     create sequence ber_seq start with 1 increment by 50|     create sequence ber_seq start with 1 increment by 50
+1706151396362|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     create table ber (         id bigint not null,         username varchar(255),         primary key (id)     )|     create table ber (         id bigint not null,         username varchar(255),         primary key (id)     )
+1706151397768|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|select next value for ber_seq|select next value for ber_seq
+1706151397840|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|insert into ber (username,id) values (?,?)|insert into ber (username,id) values ('memberA',1)
+1706151397842|0|commit|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test||
+1706153781442|3|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|select * from INFORMATION_SCHEMA.SEQUENCES|select * from INFORMATION_SCHEMA.SEQUENCES
+1706153781893|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     drop table if exists ber cascade |     drop table if exists ber cascade 
+1706153781894|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     drop sequence if exists ber_seq|     drop sequence if exists ber_seq
+1706153781898|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     create sequence ber_seq start with 1 increment by 50|     create sequence ber_seq start with 1 increment by 50
+1706153781902|1|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     create table ber (         id bigint not null,         username varchar(255),         primary key (id)     )|     create table ber (         id bigint not null,         username varchar(255),         primary key (id)     )
+1706153783366|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|select next value for ber_seq|select next value for ber_seq
+1706153783433|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|insert into ber (username,id) values (?,?)|insert into ber (username,id) values ('memberA',1)
+1706153783435|0|commit|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test||
+1706161619975|6|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|select * from INFORMATION_SCHEMA.SEQUENCES|select * from INFORMATION_SCHEMA.SEQUENCES
+1706161620627|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     drop table if exists ber cascade |     drop table if exists ber cascade 
+1706161620627|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     drop sequence if exists ber_seq|     drop sequence if exists ber_seq
+1706161620633|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     create sequence ber_seq start with 1 increment by 50|     create sequence ber_seq start with 1 increment by 50
+1706161620637|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|     create table ber (         id bigint not null,         username varchar(255),         primary key (id)     )|     create table ber (         id bigint not null,         username varchar(255),         primary key (id)     )
+1706161623471|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|select next value for ber_seq|select next value for ber_seq
+1706161623573|0|statement|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test|insert into ber (username,id) values (?,?)|insert into ber (username,id) values ('memberA',1)
+1706161623576|0|commit|connection 0|url jdbc:p6spy:h2:tcp://localhost/~/test||
