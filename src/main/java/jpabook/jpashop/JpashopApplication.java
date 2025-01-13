@@ -5,9 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class JpashopApplication {
-	public static void main(String[] args) {
+public static void main(String[] args) {
 Hello hello=new Hello(); hello.setData("MYL");System.out.println("data = "+hello.getData());
-		SpringApplication.run(JpashopApplication.class, args);
-	}
+SpringApplication.run(JpashopApplication.class, args);
+} }
 
-}
+
+
+
+
+
+

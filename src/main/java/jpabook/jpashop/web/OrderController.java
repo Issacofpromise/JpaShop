@@ -39,9 +39,9 @@ public class OrderController { private final OrderService orderService;
         return "redirect:/orders";    }
     @GetMapping(value = "/orders")
     public String orderList(@ModelAttribute("orderSearch") OrderSearch orderSearch, Model model) {
-        List<Order> orders = orderRepository.findAllByCriteria(orderSearch);
+        List<Order> orders = orderRepository.findAllByString(orderSearch);
         logger.info("OrderSearch: {}, Orders: {}", orderSearch, orders);
-      //  System.out.println("Orders: " + orders + ", OrderSearch: " + orderSearch);
+      // System.out.println("Orders: " + orders + ", OrderSearch: " + orderSearch);
         model.addAttribute("orders", orders);
         return "order/orderList";    }
     @PostMapping(value = "/orders/{orderId}/cancel")

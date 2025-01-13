@@ -1,19 +1,35 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/test
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-    schema: user1
+    url: jdbc:postgresql://postgres.railway.internal:5432/railway
+    username: postgres
+    password: mSxZwwRegBJStAawpnllkgajFRykoVNT
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        # dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
-        # show_sql: true
+        # ]show_sql: true
+  h2:
+    console:
+      enabled: true
 logging:
   level:
     org.hibernate.SQL: debug
     # org.hibernate.orm.jdbc.bind: trace
+
+
+
+
+
+
+
+
+
+
+
+
+
+

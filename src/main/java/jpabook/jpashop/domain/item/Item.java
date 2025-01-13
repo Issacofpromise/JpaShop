@@ -15,8 +15,7 @@ public abstract class Item { @Id @GeneratedValue(strategy = GenerationType.SEQUE
 @Column(name = "item_id")
     private Long id; private String name; private int price; private int stockQuantity;
     @ManyToMany(mappedBy = "items")
-    private List<Category> categories = new ArrayList<>();
-    //==비즈니스 로직==//
+    private List<Category> categories = new ArrayList<>(); //==비즈니스 로직==//
     public void addStock(int quantity) {  this.stockQuantity += quantity;  }
 
     public void change(String name, int price, int stockQuantity) {

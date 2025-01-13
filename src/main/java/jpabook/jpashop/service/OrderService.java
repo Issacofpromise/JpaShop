@@ -33,3 +33,18 @@ Order order = orderRepository.findOne(orderId); order.cancel();  }
  public List<Order> findOrders(OrderSearch orderSearch) {
  return orderRepository.findAllByString(orderSearch); }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

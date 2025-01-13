@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller @Slf4j
 public class HomeController { @RequestMapping("/")
-public String home() {    log.info("MyLove");
+public String home() {    log.info("Welcom~!");
     return "home";}
 }
