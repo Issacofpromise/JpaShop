@@ -1,15 +1,18 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres.railway.internal:5432/railway
-    username: postgres
-    password: mSxZwwRegBJStAawpnllkgajFRykoVNT
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:h2:file:~/jpashop;AUTO_SERVER=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    schema: user1
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     properties:
+      hibernate.id.optimizer.pooled.prefer_lo: true
+      hibernate.id.new_generator_mappings: true
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # dialect: org.hibernate.dialect.H2Dialect
         format_sql: true
         # ]show_sql: true
   h2:
