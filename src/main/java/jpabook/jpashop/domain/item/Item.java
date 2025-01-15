@@ -1,7 +1,6 @@
 package jpabook.jpashop.domain.item;
 
 import jakarta.persistence.*;
-import jpabook.jpashop.exception.NotEnoughStockException;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,10 +20,10 @@ public abstract class Item { @Id @GeneratedValue(strategy = GenerationType.SEQUE
     public void change(String name, int price, int stockQuantity) {
         this.setName(name); this.setPrice(price);
         this.setStockQuantity(stockQuantity);   }
-    public void removeStock(int quantity) {
+    public String removeStock(int quantity) {
         int restStock = this.stockQuantity - quantity;
-if (restStock < 0) { throw new NotEnoughStockException("need more stock"); }
-        this.stockQuantity = restStock;  }
+if (restStock < 0) { return "재고 부족! 남은 재고: " + this.stockQuantity; }//throw new NotEnoughStockException("need more stock"); }
+this.stockQuantity = restStock; return "재고 차감 완료! 남은 재고: " + this.stockQuantity; }
 }
 
 
