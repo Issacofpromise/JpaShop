@@ -1,9 +1,13 @@
+
+
 package jpabook.jpashop.domain;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +21,7 @@ public class Order { @Id @GeneratedValue(strategy = GenerationType.SEQUENCE,gene
 @Column(name = "order_id")
     private Long id;
     @ManyToOne(fetch = LAZY) @JoinColumn(name = "member_id")
-    private Member member; //주문 회원
+    private Member member;//=new ByteBuddyInterceptor(); //주문 회원
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
     @OneToOne(fetch = LAZY, cascade = CascadeType.ALL)

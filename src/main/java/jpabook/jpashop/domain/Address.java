@@ -1,3 +1,6 @@
+
+
+
 package jpabook.jpashop.domain;
 
 import jakarta.persistence.Embeddable;
@@ -10,3 +13,21 @@ public class Address {  private String city;
         this.city = city; this.street = street; this.zipcode = zipcode;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
