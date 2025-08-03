@@ -17,7 +17,7 @@ public class OrderService { private final MR mr;
     private final ItemRepository itemRepository;
     @Transactional
     public Long order(Long memberId, Long itemId, int count) {
-        Member member = mr.findOne(memberId);
+        Member member = mr.findById(memberId).get();//.findOne(memberId);
         Item item = itemRepository.findOne(itemId);
         Delivery delivery = new Delivery();
         delivery.setAddress(member.getAddress());
