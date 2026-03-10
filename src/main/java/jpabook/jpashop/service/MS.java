@@ -34,3 +34,14 @@ Member member =mr.findById(id).get();/*.findOne(id);*/member.setName(name);}}
 
 
 
+
+
+
+
+
+
+
+
+
+
+

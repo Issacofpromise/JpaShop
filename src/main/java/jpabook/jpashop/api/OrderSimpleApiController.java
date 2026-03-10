@@ -1,6 +1,7 @@
-package jpabook.jpashop.api;
 
-import jpabook.jpashop.domain.Address;
+
+
+package jpabook.jpashop.api;import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderStatus;
 import jpabook.jpashop.repository.OrderRepository;
@@ -17,7 +18,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
-
 /** * xToOne(ManyToOne, OneToOne) 관계 최적화
 * Order -> Member
 * Order -> Delivery */

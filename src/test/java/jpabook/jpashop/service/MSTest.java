@@ -23,7 +23,8 @@ class MSTest {
   public void 회원가입() throws Exception{ Member member = new Member();
         member.setName("dlal1010");
         Long saveId = ms.join(member); //em.flush();
-        assertEquals(member, mr.findOne(saveId));
+        Member findMember = mr.findById(saveId).get();
+        assertEquals(member, findMember);
     }
     @Test @Commit   // @Rollback(value = false)
     //@Transactional(noRollbackFor = IllegalStateException.class)
@@ -38,3 +39,21 @@ class MSTest {
        //fail("예외가 발생해야 한다.");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

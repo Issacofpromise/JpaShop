@@ -25,11 +25,22 @@ public void addStock(int quantity) {  this.stockQuantity += quantity;  }
 public void change(String name, int price, int stockQuantity) {
 this.setName(name); this.setPrice(price);
 this.setStockQuantity(stockQuantity);   }
-public void removeStock(int quantity) {
-int restStock = this.stockQuantity - quantity;
-//  if (restStock < 0) throw new NotEnoughStockException("need more stock");
-this.stockQuantity = restStock;
-}}
+public void removeStock(int quantity){int restStock=this.stockQuantity-quantity;
+//if (restStock < 0) throw new NotEnoughStockException("need more stock");
+this.stockQuantity = restStock;}}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
