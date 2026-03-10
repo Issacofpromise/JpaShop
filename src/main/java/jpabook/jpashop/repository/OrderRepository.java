@@ -60,8 +60,9 @@ query = query.setParameter("name", "%" + orderSearch.getMemberName() + "%");
 JPAQueryFactory query=new JPAQueryFactory(em);QOrder order = QOrder.order;
 QMember member = QMember.member;  QOrderItem orderItem = QOrderItem.orderItem;
 QItem item = QItem.item;return query.select(order).distinct().from(order)
-.join(order.member, member).fetchJoin().join(order.orderItems, orderItem).fetchJoin()
-.join(orderItem.item, item).fetchJoin().fetchJoin()
+.join(order.member, member).fetchJoin()
+.join(order.orderItems, orderItem).fetchJoin()
+.join(orderItem.item, item).fetchJoin()
 .where(statusEq(orderSearch.getOrderStatus()),nameLike(orderSearch.getMemberName()))
 .limit(1000).fetch();} private BooleanExpression statusEq(OrderStatus statusCond){
 if(statusCond == null) return null;return order.status.eq(statusCond);
