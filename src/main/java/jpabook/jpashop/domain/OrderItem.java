@@ -17,6 +17,7 @@ public class OrderItem { @Id @GeneratedValue(strategy = GenerationType.SEQUENCE,
 @JsonIgnore @ManyToOne(fetch = FetchType.LAZY) @JoinColumn(name = "order_id")
 private Order order; private int orderPrice; private int count;
 //protected OrderItem(){}
+//public void setOrder(Order order) {this.order = order;}
 public void cancel() {getItem().addStock(count); }
 public int getTotalPrice() { return getOrderPrice()*getCount(); }
 public static OrderItem createOrderItem(Item item,int orderPrice,int count){
